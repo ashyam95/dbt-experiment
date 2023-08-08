@@ -1,0 +1,13 @@
+liquor_store:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: service-connection.json
+      project: tokyo-analyst-354917
+      dataset: liquor_store
+      threads: 3
+      timeout_seconds: 300
+      location: US
+      priority: interactive
